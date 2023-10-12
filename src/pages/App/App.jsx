@@ -25,6 +25,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <div>Deployed with github actions</div>
       <h1>Cities Of The World</h1>
       <div id="wrapper">
         <div id="thumbnails">{images}</div>
