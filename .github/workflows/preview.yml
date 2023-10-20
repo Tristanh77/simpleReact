@@ -19,6 +19,6 @@ jobs:
               run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
             #   tests here run on main branch
             - name: Run tests
-              run: npx tests/simpleReactApp.test.js test
+              run: npm test
             - name: deploy project artifacts to vercel
               run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
