@@ -17,5 +17,8 @@ jobs:
               run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
             - name: build project artifacts
               run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+            #   tests here run on main branch  
+            - name: Run tests
+              run: npm test --passWithNoTests
             - name: deploy project artifacts to vercel
               run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
